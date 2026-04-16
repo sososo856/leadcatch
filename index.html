@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<!--
+  File: index.html
+  Purpose: LeadCatch AI landing page — high-converting single-page site
+  Site: leadcatch.homes
+  Webhook: https://hook.us2.make.com/f0313sorwhx2wjjtui8lma58xw91q3gj
+  Date: 2026-04-15
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stop losing roofing jobs to voicemail. LeadCatch responds to every missed call instantly, qualifies the lead, and books the job — automatically." />
+  <title>LeadCatch — Every Missed Call Costs You Money</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d1117;
+      --bg2: #161b22;
+      --bg3: #1c2330;
+      --border: #2a3444;
+      --accent: #f97316;
+      --accent-dim: rgba(249,115,22,0.15);
+      --blue: #3b82f6;
+      --blue-dim: rgba(59,130,246,0.12);
+      --text: #e6edf3;
+      --muted: #8b9ab1;
+      --white: #ffffff;
+      --radius: 12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13,17,23,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.5px;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-cta {
+      background: var(--accent);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.875rem;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      display: inline-block;
+    }
+    .nav-cta:hover { background: #ea6c0a; transform: translateY(-1px); }
+
+    /* ─── HERO ─── */
+    #hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 24px 60px;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(249,115,22,0.1) 0%, transparent 60%),
+                  var(--bg);
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .hero-inner { max-width: 800px; position: relative; }
+    .hero-eyebrow {
+      display: inline-block;
+      background: var(--accent-dim);
+      border: 1px solid rgba(249,115,22,0.3);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+    .hero-headline {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .hero-headline .accent { color: var(--accent); }
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 1.1rem;
+      font-weight: 800;
+      padding: 18px 44px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 30px rgba(249,115,22,0.35);
+    }
+    .hero-cta:hover {
+      background: #ea6c0a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 40px rgba(249,115,22,0.45);
+    }
+    .hero-note {
+      margin-top: 16px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* ─── SECTION WRAPPER ─── */
+    section { padding: 80px 24px; }
+    .container { max-width: 1060px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 900;
+      letter-spacing: -1px;
+      color: var(--white);
+      margin-bottom: 14px;
+      line-height: 1.15;
+    }
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+
+    /* ─── PAIN SECTION ─── */
+    #pain { background: var(--bg2); }
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .pain-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .pain-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--accent);
+    }
+    .pain-stat {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--accent);
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .pain-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .pain-desc { font-size: 0.92rem; color: var(--muted); line-height: 1.6; }
+
+    /* ─── HOW IT WORKS ─── */
+    #how { background: var(--bg); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+      margin-top: 52px;
+      position: relative;
+    }
+    .steps::before {
+      content: '';
+      position: absolute;
+      top: 48px;
+      left: 16%;
+      right: 16%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--border), var(--accent), var(--border));
+      opacity: 0.5;
+    }
+    @media (max-width: 700px) { .steps::before { display: none; } }
+    .step {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      text-align: center;
+      position: relative;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .step:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .step-num {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--accent-dim);
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      font-size: 1.3rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .step-icon { font-size: 2rem; margin-bottom: 10px; }
+    .step-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .step-desc { font-size: 0.92rem; color: var(--muted); line-height: 1.65; }
+
+    /* ─── WHAT YOU GET ─── */
+    #features { background: var(--bg2); }
+    .features-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px;
+      margin-top: 48px;
+      max-width: 680px;
+    }
+    .features-plan-label {
+      display: inline-block;
+      background: var(--accent-dim);
+      border: 1px solid rgba(249,115,22,0.3);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    .features-plan-name {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.97rem;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .feature-list li::before {
+      content: '✓';
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      background: var(--accent-dim);
+      border: 1px solid rgba(249,115,22,0.4);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 900;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    /* ─── TESTIMONIALS ─── */
+    #social { background: var(--bg); }
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 52px;
+    }
+    .testimonial {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      position: relative;
+    }
+    .testimonial::before {
+      content: '"';
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      font-size: 5rem;
+      line-height: 1;
+      color: var(--accent);
+      opacity: 0.15;
+      font-family: Georgia, serif;
+    }
+    .testimonial-body {
+      font-size: 0.98rem;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .testimonial-stars {
+      color: var(--accent);
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    .testimonial-name {
+      font-weight: 800;
+      color: var(--white);
+      font-size: 0.95rem;
+    }
+    .testimonial-co { font-size: 0.83rem; color: var(--muted); margin-top: 3px; }
+
+    /* ─── PRICING ─── */
+    #pricing { background: var(--bg2); }
+    .pricing-single {
+      max-width: 520px;
+      margin: 52px auto 0;
+    }
+    .pricing-card {
+      background: var(--bg);
+      border: 2px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 44px 40px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 0 60px rgba(249,115,22,0.12);
+    }
+    .pricing-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: var(--white);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 18px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+    .pricing-plan {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .pricing-price {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: var(--white);
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .pricing-price sup {
+      font-size: 1.4rem;
+      font-weight: 700;
+      vertical-align: super;
+      letter-spacing: 0;
+    }
+    .pricing-period { font-size: 0.9rem; color: var(--muted); margin-bottom: 28px; }
+    .pricing-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 24px 0;
+    }
+    .pricing-list {
+      list-style: none;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .pricing-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    .pricing-list li::before {
+      content: '✓';
+      flex-shrink: 0;
+      color: var(--accent);
+      font-weight: 900;
+      margin-top: 1px;
+    }
+    .pricing-cta {
+      display: block;
+      width: 100%;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 1.05rem;
+      font-weight: 800;
+      padding: 16px;
+      border-radius: 9px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 24px rgba(249,115,22,0.3);
+    }
+    .pricing-cta:hover { background: #ea6c0a; transform: translateY(-2px); }
+    .pricing-note { font-size: 0.8rem; color: var(--muted); margin-top: 14px; }
+
+    /* ─── FORM / CTA ─── */
+    #contact { background: var(--bg); }
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    @media (max-width: 760px) {
+      .contact-inner { grid-template-columns: 1fr; gap: 36px; }
+    }
+    .contact-left .section-sub { margin-top: 14px; }
+    .contact-bullets {
+      list-style: none;
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .contact-bullets li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    .contact-bullets li::before {
+      content: '→';
+      color: var(--accent);
+      font-weight: 900;
+    }
+    .form-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px;
+    }
+    .form-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+    .form-group { margin-bottom: 18px; }
+    label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.5px;
+      margin-bottom: 7px;
+      text-transform: uppercase;
+    }
+    input, select {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 0.97rem;
+      padding: 13px 16px;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+    }
+    input:focus, select:focus { border-color: var(--accent); }
+    input::placeholder { color: #4a5568; }
+    select option { background: var(--bg2); }
+    .form-submit {
+      display: block;
+      width: 100%;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 1.05rem;
+      font-weight: 800;
+      padding: 15px;
+      border-radius: 9px;
+      border: none;
+      cursor: pointer;
+      margin-top: 24px;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 24px rgba(249,115,22,0.3);
+    }
+    .form-submit:hover { background: #ea6c0a; transform: translateY(-1px); }
+    .form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    #form-success {
+      display: none;
+      background: rgba(34,197,94,0.1);
+      border: 1px solid rgba(34,197,94,0.3);
+      border-radius: 9px;
+      padding: 20px;
+      text-align: center;
+      color: #4ade80;
+      font-weight: 700;
+      margin-top: 20px;
+    }
+    #form-error {
+      display: none;
+      background: rgba(239,68,68,0.1);
+      border: 1px solid rgba(239,68,68,0.3);
+      border-radius: 9px;
+      padding: 14px;
+      text-align: center;
+      color: #f87171;
+      font-size: 0.9rem;
+      margin-top: 14px;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .footer-logo {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .footer-logo span { color: var(--accent); }
+    .footer-domain { font-size: 0.85rem; color: var(--muted); margin-bottom: 10px; }
+    .footer-tagline { font-size: 0.88rem; color: var(--muted); font-style: italic; }
+    .footer-copy { font-size: 0.78rem; color: #3a4455; margin-top: 20px; }
+
+    /* ─── UTILITY ─── */
+    @media (max-width: 600px) {
+      section { padding: 56px 20px; }
+      .features-box { padding: 28px 22px; }
+      .pricing-card { padding: 40px 24px; }
+      .form-card { padding: 26px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">Lead<span>Catch</span></span>
+  <a href="#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">For Roofing Contractors</div>
+    <h1 class="hero-headline">
+      Every Missed Call Is a<br><span class="accent">Job You Didn't Book</span>
+    </h1>
+    <p class="hero-sub">
+      When a homeowner calls and gets voicemail, they call the next roofer on the list.
+      LeadCatch responds instantly, qualifies the lead, and books the job — before your competitor picks up.
+    </p>
+    <a href="#contact" class="hero-cta">See How It Works</a>
+    <p class="hero-note">No setup fees &nbsp;·&nbsp; Works with your existing phone number</p>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section id="pain">
+  <div class="container">
+    <div class="section-label">The Problem</div>
+    <h2 class="section-title">You're already paying for leads.<br>You're just not answering them.</h2>
+    <p class="section-sub">Most roofers spend thousands on marketing, then lose the lead at the first point of contact.</p>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-stat">62%</div>
+        <div class="pain-title">Of callers don't leave a voicemail</div>
+        <div class="pain-desc">They hang up and call the next roofer on Google. You paid for that click. They got the job.</div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-stat">78%</div>
+        <div class="pain-title">Of jobs go to whoever responds first</div>
+        <div class="pain-desc">Speed is the sale. If you're on a roof when the call comes in, that lead is already gone by the time you call back.</div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-stat">$14K</div>
+        <div class="pain-title">Average revenue lost per missed job</div>
+        <div class="pain-desc">A single full-replacement roof. Missed calls aren't an inconvenience — they're a direct hit to your revenue every week.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="container">
+    <div class="section-label">How It Works</div>
+    <h2 class="section-title">Three steps. Zero effort on your end.</h2>
+    <p class="section-sub">LeadCatch runs in the background. You keep doing the work. The jobs fill up on their own.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-icon">📞</div>
+        <div class="step-title">Homeowner calls. You miss it.</div>
+        <div class="step-desc">Doesn't matter if you're on a job, in a meeting, or off the clock. LeadCatch triggers the moment a call goes unanswered.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-icon">⚡</div>
+        <div class="step-title">LeadCatch responds in seconds</div>
+        <div class="step-desc">An instant SMS and email goes out. It answers their question, asks the right qualifying questions, and keeps them engaged with your company — not the next guy's.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-icon">📋</div>
+        <div class="step-title">Job is booked. You show up.</div>
+        <div class="step-desc">You get a full lead summary — what they need, their address, and when they want someone out. You close or your team closes. The lead never went cold.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section id="features">
+  <div class="container">
+    <div class="section-label">What's Included</div>
+    <h2 class="section-title">Everything you need to stop losing jobs to voicemail.</h2>
+    <div class="features-box">
+      <div class="features-plan-label">Growth Plan</div>
+      <div class="features-plan-name">Full inbound + proactive outreach</div>
+      <ul class="feature-list">
+        <li>Instant SMS + email response to every missed call — within 60 seconds</li>
+        <li>Lead qualification via automated follow-up conversation</li>
+        <li>Appointment booking and calendar coordination</li>
+        <li>Proactive outreach to storm-damaged neighborhoods after weather events</li>
+        <li>Homeowners with recent permit pulls — targeted before they call anyone</li>
+        <li>Full lead summary delivered to you before every call-back</li>
+        <li>Works alongside your existing phone number — no call forwarding headaches</li>
+        <li>Dedicated account setup and onboarding included</li>
+        <li>Monthly performance report — calls captured, leads qualified, jobs booked</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section id="social">
+  <div class="container">
+    <div class="section-label">From the Field</div>
+    <h2 class="section-title">Roofers who stopped losing jobs to voicemail.</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-body">"I was skeptical. But within the first week, LeadCatch caught two jobs I would've flat-out missed. One was a full replacement — nearly $18K. Paid for itself before the month was over."</div>
+        <div class="testimonial-name">Marcus T.</div>
+        <div class="testimonial-co">Titan Roofing &amp; Exteriors · Dallas, TX</div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-body">"We used to lose leads every weekend when the crew was busy. Now every call gets a response in under a minute, and I wake up Monday with a full pipeline. It's the best money I spend."</div>
+        <div class="testimonial-name">Derek W.</div>
+        <div class="testimonial-co">PeakLine Roofing · Nashville, TN</div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-body">"After the hailstorm last spring, LeadCatch had already reached out to half the neighborhood before my competitors even knew the storm hit. We booked 11 jobs from one weather event."</div>
+        <div class="testimonial-name">Jamie R.</div>
+        <div class="testimonial-co">Summit Storm Restoration · Denver, CO</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container" style="text-align:center;">
+    <div class="section-label">Pricing</div>
+    <h2 class="section-title">One plan. Everything included.</h2>
+    <p class="section-sub" style="margin:0 auto 0;">No tiers, no upsells. You get the full system — inbound + proactive outreach — from day one.</p>
+    <div class="pricing-single">
+      <div class="pricing-card">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-plan">Growth Plan</div>
+        <div class="pricing-price"><sup>$</sup>2,997</div>
+        <div class="pricing-period">per month · cancel anytime</div>
+        <hr class="pricing-divider" />
+        <ul class="pricing-list">
+          <li>Instant response to every missed call — 24/7</li>
+          <li>Lead qualification and appointment scheduling</li>
+          <li>Proactive storm area outreach</li>
+          <li>Permit pull targeting — catch jobs before they're on the market</li>
+          <li>Full lead briefings before every call-back</li>
+          <li>Monthly performance reporting</li>
+          <li>Dedicated onboarding and setup</li>
+        </ul>
+        <a href="#contact" class="pricing-cta">Claim Your Spot</a>
+        <p class="pricing-note">We work with a limited number of contractors per market. Availability varies by region.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / FORM -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-left">
+        <div class="section-label">Get Started</div>
+        <h2 class="section-title">Let's stop the bleed.</h2>
+        <p class="section-sub">Tell us a bit about your business. We'll follow up within one business day to show you exactly how LeadCatch would work for your market.</p>
+        <ul class="contact-bullets">
+          <li>No commitment required to get a demo</li>
+          <li>We'll tell you how many leads you're likely losing per month</li>
+          <li>Setup takes less than 48 hours once you're in</li>
+        </ul>
+      </div>
+      <div class="contact-right">
+        <div class="form-card">
+          <div class="form-title">Talk to the team</div>
+          <form id="lead-form" novalidate>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="company">Company Name</label>
+              <input type="text" id="company" name="company" placeholder="Smith Roofing LLC" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@smithroofing.com" required />
+            </div>
+            <div class="form-group">
+              <label for="revenue">Monthly Revenue Range</label>
+              <select id="revenue" name="revenue" required>
+                <option value="" disabled selected>Select range...</option>
+                <option value="Under $500K">Under $500K / year</option>
+                <option value="$500K–$1M">$500K–$1M / year</option>
+                <option value="$1M–$5M">$1M–$5M / year</option>
+                <option value="$5M+">$5M+ / year</option>
+              </select>
+            </div>
+            <button type="submit" class="form-submit" id="submit-btn">Book My Demo Call →</button>
+            <div id="form-error">Something went wrong. Please try again or email us directly.</div>
+          </form>
+          <div id="form-success">
+            You're in. We'll be in touch within one business day.<br/>
+            <span style="font-weight:400;font-size:0.9rem;color:#86efac;">Check your inbox for a confirmation.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Lead<span>Catch</span></div>
+  <div class="footer-domain">leadcatch.homes</div>
+  <div class="footer-tagline">Every call answered. Every job captured.</div>
+  <div class="footer-copy">&copy; 2026 LeadCatch. All rights reserved.</div>
+</footer>
+
+<script>
+  (function() {
+    var form = document.getElementById('lead-form');
+    var btn  = document.getElementById('submit-btn');
+    var successEl = document.getElementById('form-success');
+    var errorEl   = document.getElementById('form-error');
+
+    var WEBHOOK = 'https://hook.us2.make.com/f0313sorwhx2wjjtui8lma58xw91q3gj';
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      errorEl.style.display = 'none';
+
+      var name    = document.getElementById('name').value.trim();
+      var company = document.getElementById('company').value.trim();
+      var phone   = document.getElementById('phone').value.trim();
+      var email   = document.getElementById('email').value.trim();
+      var revenue = document.getElementById('revenue').value;
+
+      if (!name || !company || !phone || !email || !revenue) {
+        errorEl.textContent = 'Please fill in all fields before submitting.';
+        errorEl.style.display = 'block';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      var payload = {
+        name: name,
+        company: company,
+        phone: phone,
+        email: email,
+        revenue: revenue,
+        source: 'leadcatch.homes',
+        submitted_at: new Date().toISOString()
+      };
+
+      fetch(WEBHOOK, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+      .then(function(res) {
+        if (res.ok || res.status === 200) {
+          form.style.display = 'none';
+          successEl.style.display = 'block';
+        } else {
+          throw new Error('Server error: ' + res.status);
+        }
+      })
+      .catch(function() {
+        btn.disabled = false;
+        btn.textContent = 'Book My Demo Call →';
+        errorEl.textContent = 'Something went wrong. Please try again.';
+        errorEl.style.display = 'block';
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
