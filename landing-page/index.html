@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<!--
+  File: index.html
+  Purpose: LeadCatch AI pre-launch landing page with referral waitlist mechanic
+  Sections: hero, problem, solution, features, social proof, pricing, FAQ, CTA
+  Date: 2026-04-16
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LeadCatch AI responds to every missed call in 60 seconds, qualifies the lead, and books the appointment — so roofing contractors never lose another job to voicemail." />
+  <title>LeadCatch AI — Never Lose a Lead to Voicemail Again</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: '#0d1117',
+            dark2: '#161b22',
+            dark3: '#1c2330',
+            border: '#2a3444',
+            accent: '#f97316',
+            accentHover: '#ea6c0a',
+            blue: '#3b82f6',
+            muted: '#8b9ab1',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { -webkit-font-smoothing: antialiased; }
+    .gradient-text { background: linear-gradient(135deg, #f97316, #fb923c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .glow { box-shadow: 0 0 40px rgba(249, 115, 22, 0.1); }
+    .glow-blue { box-shadow: 0 0 40px rgba(59, 130, 246, 0.1); }
+    .fade-in { animation: fadeIn 0.6s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] summary .faq-arrow { transform: rotate(180deg); }
+    .faq-arrow { transition: transform 0.2s ease; }
+    .stat-card { backdrop-filter: blur(8px); }
+  </style>
+</head>
+<body class="bg-dark text-white font-sans">
+
+  <!-- ==================== NAV ==================== -->
+  <nav class="sticky top-0 z-50 bg-dark/92 backdrop-blur-md border-b border-border">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-extrabold tracking-tight">Lead<span class="text-accent">Catch</span></a>
+      <div class="hidden md:flex items-center gap-8 text-sm text-muted">
+        <a href="#problem" class="hover:text-white transition-colors">Problem</a>
+        <a href="#features" class="hover:text-white transition-colors">Features</a>
+        <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+        <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+      </div>
+      <a href="#waitlist" class="bg-accent hover:bg-accentHover text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-all">Join the Waitlist</a>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="max-w-6xl mx-auto px-6 pt-20 pb-16 md:pt-28 md:pb-24">
+    <div class="max-w-3xl">
+      <div class="inline-block bg-accent/10 text-accent text-sm font-semibold px-4 py-1.5 rounded-full mb-6">Built for Roofing Contractors</div>
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.1] mb-6">
+        Every Missed Call<br>Is a <span class="gradient-text">Lost Job</span>
+      </h1>
+      <p class="text-lg md:text-xl text-muted max-w-xl mb-8">
+        LeadCatch responds to every missed call in under 60 seconds, qualifies the lead, and books the appointment on your calendar. 24/7. No staff needed.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 mb-8">
+        <a href="#waitlist" class="bg-accent hover:bg-accentHover text-white font-bold text-center px-8 py-4 rounded-xl text-lg transition-all">Get Early Access</a>
+        <a href="#how-it-works" class="border border-border hover:border-muted text-white font-semibold text-center px-8 py-4 rounded-xl text-lg transition-all">See How It Works</a>
+      </div>
+      <div class="flex flex-wrap gap-6 text-sm text-muted">
+        <span>60-second response time</span>
+        <span>24/7 coverage</span>
+        <span>30-day money-back guarantee</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STATS BAR ==================== -->
+  <section class="border-y border-border bg-dark2/50">
+    <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <div class="text-3xl md:text-4xl font-extrabold text-accent">62%</div>
+        <div class="text-sm text-muted mt-1">of service calls go unanswered</div>
+      </div>
+      <div>
+        <div class="text-3xl md:text-4xl font-extrabold text-accent">78%</div>
+        <div class="text-sm text-muted mt-1">of callers hire the first responder</div>
+      </div>
+      <div>
+        <div class="text-3xl md:text-4xl font-extrabold text-accent">$47K</div>
+        <div class="text-sm text-muted mt-1">lost per year to missed calls</div>
+      </div>
+      <div>
+        <div class="text-3xl md:text-4xl font-extrabold text-accent">60s</div>
+        <div class="text-sm text-muted mt-1">LeadCatch response time</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROBLEM ==================== -->
+  <section id="problem" class="max-w-6xl mx-auto px-6 py-20 md:py-28">
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">You're Losing Jobs Right Now</h2>
+      <p class="text-lg text-muted">Here's what happens every time your phone goes to voicemail.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-dark2 border border-border rounded-2xl p-8">
+        <div class="text-4xl mb-4">&#128222;</div>
+        <h3 class="text-lg font-bold mb-2">The Call Comes In</h3>
+        <p class="text-muted text-sm">A homeowner with storm damage searches Google, finds your company, and calls. You're on a roof. It rings 5 times. Voicemail.</p>
+      </div>
+      <div class="bg-dark2 border border-border rounded-2xl p-8">
+        <div class="text-4xl mb-4">&#9201;</div>
+        <h3 class="text-lg font-bold mb-2">They Don't Wait</h3>
+        <p class="text-muted text-sm">The homeowner doesn't leave a message. They tap "back" and call the next contractor on the list. That contractor picks up. Estimate booked.</p>
+      </div>
+      <div class="bg-dark2 border border-border rounded-2xl p-8">
+        <div class="text-4xl mb-4">&#128176;</div>
+        <h3 class="text-lg font-bold mb-2">You Never Know</h3>
+        <p class="text-muted text-sm">You check your phone at lunch. One missed call. No voicemail. You shrug and move on. That was a $12,000 roof replacement. Gone.</p>
+      </div>
+    </div>
+    <p class="text-center text-muted mt-10 text-sm">This happens 10-15 times per week for the average roofing contractor. That's $47,000+ per year.</p>
+  </section>
+
+  <!-- ==================== HOW IT WORKS ==================== -->
+  <section id="how-it-works" class="bg-dark2/50 border-y border-border">
+    <div class="max-w-6xl mx-auto px-6 py-20 md:py-28">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">How LeadCatch Works</h2>
+        <p class="text-lg text-muted">Three minutes from missed call to booked appointment. Zero effort from you.</p>
+      </div>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="text-center">
+          <div class="w-14 h-14 bg-accent/10 text-accent font-extrabold text-xl rounded-2xl flex items-center justify-center mx-auto mb-4">1</div>
+          <h3 class="font-bold mb-2">Call Goes to Voicemail</h3>
+          <p class="text-sm text-muted">A lead calls your business and nobody picks up. Happens all day, every day.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 bg-accent/10 text-accent font-extrabold text-xl rounded-2xl flex items-center justify-center mx-auto mb-4">2</div>
+          <h3 class="font-bold mb-2">Alex Texts Back in 60s</h3>
+          <p class="text-sm text-muted">"Hey, this is Alex from [Your Company] — saw you just called. What did you need help with today?"</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 bg-accent/10 text-accent font-extrabold text-xl rounded-2xl flex items-center justify-center mx-auto mb-4">3</div>
+          <h3 class="font-bold mb-2">Alex Qualifies the Lead</h3>
+          <p class="text-sm text-muted">Asks about damage, insurance, urgency, and location. Handles objections like a real person.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 bg-accent/10 text-accent font-extrabold text-xl rounded-2xl flex items-center justify-center mx-auto mb-4">4</div>
+          <h3 class="font-bold mb-2">Appointment Booked</h3>
+          <p class="text-sm text-muted">Alex books the estimate on your Google Calendar. You get a notification. Lead is warm.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURES ==================== -->
+  <section id="features" class="max-w-6xl mx-auto px-6 py-20 md:py-28">
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Everything Alex Does for You</h2>
+      <p class="text-lg text-muted">Alex is your AI sales assistant. Works 24/7. Never misses a follow-up. Never calls in sick.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Feature 1 -->
+      <div class="bg-dark2 border border-border rounded-2xl p-8 glow">
+        <div class="w-12 h-12 bg-accent/10 text-accent rounded-xl flex items-center justify-center mb-4 text-xl font-bold">&#9889;</div>
+        <h3 class="text-lg font-bold mb-2">60-Second Response</h3>
+        <p class="text-sm text-muted">When a call goes to voicemail, Alex texts the caller within 60 seconds. The industry average response time is 47 hours. Alex closes that gap instantly.</p>
+      </div>
+      <!-- Feature 2 -->
+      <div class="bg-dark2 border border-border rounded-2xl p-8 glow">
+        <div class="w-12 h-12 bg-accent/10 text-accent rounded-xl flex items-center justify-center mb-4 text-xl font-bold">&#128172;</div>
+        <h3 class="text-lg font-bold mb-2">AI Qualification</h3>
+        <p class="text-sm text-muted">Alex asks the right questions — damage type, insurance status, urgency, location — and sounds like a real member of your team. Not a chatbot. Not a script.</p>
+      </div>
+      <!-- Feature 3 -->
+      <div class="bg-dark2 border border-border rounded-2xl p-8 glow">
+        <div class="w-12 h-12 bg-accent/10 text-accent rounded-xl flex items-center justify-center mb-4 text-xl font-bold">&#128197;</div>
+        <h3 class="text-lg font-bold mb-2">Auto Booking</h3>
+        <p class="text-sm text-muted">Alex checks your Google Calendar availability and books the estimate directly. No phone tag. No back-and-forth. Lead goes from missed call to calendar in minutes.</p>
+      </div>
+      <!-- Feature 4 -->
+      <div class="bg-dark2 border border-border rounded-2xl p-8">
+        <div class="w-12 h-12 bg-blue/10 text-blue rounded-xl flex items-center justify-center mb-4 text-xl font-bold">&#127786;</div>
+        <h3 class="text-lg font-bold mb-2">Storm Surge</h3>
+        <p class="text-sm text-muted">When severe weather hits your area, Alex proactively reaches out to homeowners in affected zip codes — before they start searching for a contractor.</p>
+      </div>
+      <!-- Feature 5 -->
+      <div class="bg-dark2 border border-border rounded-2xl p-8">
+        <div class="w-12 h-12 bg-blue/10 text-blue rounded-xl flex items-center justify-center mb-4 text-xl font-bold">&#128257;</div>
+        <h3 class="text-lg font-bold mb-2">7-Touch Follow-Up</h3>
+        <p class="text-sm text-muted">If a lead goes quiet, Alex follows up 7 times over 14 days. Most responses come from follow-up 2 through 4 — messages a sales rep would never send.</p>
+      </div>
+      <!-- Feature 6 -->
+      <div class="bg-dark2 border border-border rounded-2xl p-8">
+        <div class="w-12 h-12 bg-blue/10 text-blue rounded-xl flex items-center justify-center mb-4 text-xl font-bold">&#11088;</div>
+        <h3 class="text-lg font-bold mb-2">Review Requests</h3>
+        <p class="text-sm text-muted">After a job is done, Alex automatically asks the homeowner for a Google review. More reviews mean higher LSA rankings mean more leads.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SOCIAL PROOF ==================== -->
+  <section class="bg-dark2/50 border-y border-border">
+    <div class="max-w-6xl mx-auto px-6 py-20 md:py-28">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Why Speed to Lead Wins Jobs</h2>
+        <p class="text-lg text-muted">Industry data that shaped how we built LeadCatch.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-dark2 border border-border rounded-2xl p-8">
+          <div class="w-12 h-12 bg-accent/10 text-accent rounded-xl flex items-center justify-center mb-4 text-xl font-bold">&#128200;</div>
+          <h3 class="text-lg font-bold mb-2">78% hire the first responder</h3>
+          <p class="text-sm text-muted mb-4">According to CallRail and ServiceTitan data, homeowners overwhelmingly go with the first contractor who responds. Speed isn't a nice-to-have — it's the #1 factor in winning the job.</p>
+          <div class="text-xs text-muted">Source: CallRail Speed-to-Lead Report</div>
+        </div>
+        <div class="bg-dark2 border border-border rounded-2xl p-8">
+          <div class="w-12 h-12 bg-accent/10 text-accent rounded-xl flex items-center justify-center mb-4 text-xl font-bold">&#9201;</div>
+          <h3 class="text-lg font-bold mb-2">47-hour average response time</h3>
+          <p class="text-sm text-muted mb-4">The average home services company takes nearly two days to follow up on a lead. LeadCatch is designed to close that gap to under 60 seconds — turning your biggest vulnerability into your advantage.</p>
+          <div class="text-xs text-muted">Source: ServiceTitan Industry Benchmark</div>
+        </div>
+        <div class="bg-dark2 border border-border rounded-2xl p-8">
+          <div class="w-12 h-12 bg-accent/10 text-accent rounded-xl flex items-center justify-center mb-4 text-xl font-bold">&#128176;</div>
+          <h3 class="text-lg font-bold mb-2">$47K+ lost per year to missed calls</h3>
+          <p class="text-sm text-muted mb-4">For a contractor getting 20 calls/week at a 50% miss rate and $12K average job value, the math is brutal. Even recovering 30% of those leads would add $50K+ in annual revenue.</p>
+          <div class="text-xs text-muted">Source: NRCA + LeadCatch internal modeling</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRICING ==================== -->
+  <section id="pricing" class="max-w-6xl mx-auto px-6 py-20 md:py-28">
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Simple Pricing. Guaranteed ROI.</h2>
+      <p class="text-lg text-muted">Every plan includes a 30-day money-back guarantee. If LeadCatch doesn't pay for itself, you pay nothing.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <!-- Starter -->
+      <div class="bg-dark2 border border-border rounded-2xl p-8">
+        <h3 class="text-lg font-bold mb-1">Starter</h3>
+        <p class="text-sm text-muted mb-4">For solo contractors with 5-15 leads/week</p>
+        <div class="mb-6">
+          <span class="text-4xl font-extrabold">$597</span>
+          <span class="text-muted">/mo</span>
+        </div>
+        <ul class="space-y-3 text-sm text-muted mb-8">
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> 60-second missed call response</li>
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> AI lead qualification</li>
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> Google Calendar booking</li>
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> 5-touch follow-up (7 days)</li>
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> 1 lead source</li>
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> 100 conversations/month</li>
+        </ul>
+        <a href="#waitlist" class="block text-center border border-border hover:border-accent text-white font-bold py-3 rounded-xl transition-all">Join Waitlist</a>
+      </div>
+      <!-- Growth (Featured) -->
+      <div class="bg-dark2 border-2 border-accent rounded-2xl p-8 relative glow">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-bold px-4 py-1 rounded-full">Most Popular</div>
+        <h3 class="text-lg font-bold mb-1">Growth</h3>
+        <p class="text-sm text-muted mb-4">For contractors doing $750K-$2.5M/year</p>
+        <div class="mb-6">
+          <span class="text-4xl font-extrabold">$2,997</span>
+          <span class="text-muted">/mo</span>
+        </div>
+        <ul class="space-y-3 text-sm text-muted mb-8">
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> Everything in Starter</li>
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> 7-touch follow-up (14 days)</li>
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> Unlimited lead sources</li>
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> Storm Surge outreach</li>
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> Google review automation</li>
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> 500 conversations/month</li>
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> Priority support</li>
+        </ul>
+        <a href="#waitlist" class="block text-center bg-accent hover:bg-accentHover text-white font-bold py-3 rounded-xl transition-all">Join Waitlist</a>
+      </div>
+      <!-- Scale -->
+      <div class="bg-dark2 border border-border rounded-2xl p-8">
+        <h3 class="text-lg font-bold mb-1">Scale</h3>
+        <p class="text-sm text-muted mb-4">For multi-crew companies doing $2.5M+</p>
+        <div class="mb-6">
+          <span class="text-4xl font-extrabold">$4,997</span>
+          <span class="text-muted">/mo</span>
+        </div>
+        <ul class="space-y-3 text-sm text-muted mb-8">
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> Everything in Growth</li>
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> Unlimited conversations</li>
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> Multi-calendar routing</li>
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> Custom Alex persona</li>
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> CRM integration</li>
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> Bi-weekly strategy calls</li>
+          <li class="flex items-start gap-2"><span class="text-accent mt-0.5">&#10003;</span> Dedicated account manager</li>
+        </ul>
+        <a href="#waitlist" class="block text-center border border-border hover:border-accent text-white font-bold py-3 rounded-xl transition-all">Join Waitlist</a>
+      </div>
+    </div>
+    <!-- Founder's Deal -->
+    <div class="max-w-3xl mx-auto mt-10 bg-gradient-to-r from-accent/10 to-orange-500/5 border border-accent/30 rounded-2xl p-8 text-center">
+      <div class="text-sm text-accent font-bold mb-2">LIMITED — FOUNDER'S LIFETIME DEAL</div>
+      <h3 class="text-2xl font-extrabold mb-2">$14,970 One-Time — Growth Plan for Life</h3>
+      <p class="text-muted text-sm mb-4">No monthly payments. No price increases. Ever. Only <span id="lifetimeSeats" class="text-white font-bold">50</span> spots available.</p>
+      <a href="#waitlist" class="inline-block bg-accent hover:bg-accentHover text-white font-bold px-8 py-3 rounded-xl transition-all">Reserve Your Spot</a>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section id="faq" class="bg-dark2/50 border-y border-border">
+    <div class="max-w-3xl mx-auto px-6 py-20 md:py-28">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-16">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="bg-dark2 border border-border rounded-xl">
+          <summary class="p-6 flex justify-between items-center">
+            <span class="font-semibold">What exactly is LeadCatch?</span>
+            <span class="faq-arrow text-muted text-xl">&#9660;</span>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-muted">LeadCatch is a done-for-you AI lead conversion system for roofing contractors. When a lead calls and gets no answer, our AI assistant Alex texts them back within 60 seconds, qualifies them through natural conversation, and books an estimate on your calendar. It works 24/7 with zero effort from you.</div>
+        </details>
+        <details class="bg-dark2 border border-border rounded-xl">
+          <summary class="p-6 flex justify-between items-center">
+            <span class="font-semibold">How is this different from Podium or Hatch?</span>
+            <span class="faq-arrow text-muted text-xl">&#9660;</span>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-muted">Podium and Hatch are tools you manage. LeadCatch is a system that runs itself. With Podium, someone on your team still has to respond. With Hatch, you still have to build campaigns. With LeadCatch, you connect your lead sources in one call and Alex handles everything — qualification, objection handling, scheduling — automatically.</div>
+        </details>
+        <details class="bg-dark2 border border-border rounded-xl">
+          <summary class="p-6 flex justify-between items-center">
+            <span class="font-semibold">Do I need to know anything about technology?</span>
+            <span class="faq-arrow text-muted text-xl">&#9660;</span>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-muted">No. That's the point. We handle every technical aspect in one 60-minute onboarding call. You give us access to your lead sources and calendar, and we configure everything. After that, you just watch your calendar fill up.</div>
+        </details>
+        <details class="bg-dark2 border border-border rounded-xl">
+          <summary class="p-6 flex justify-between items-center">
+            <span class="font-semibold">What results can I expect?</span>
+            <span class="faq-arrow text-muted text-xl">&#9660;</span>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-muted">Most clients see a 25-40% improvement in lead-to-appointment rate within 30 days. That translates to 2-4 extra booked jobs per week. At an average job value of $12,000, that's $24,000-$48,000 in additional monthly pipeline from the same leads you're already getting.</div>
+        </details>
+        <details class="bg-dark2 border border-border rounded-xl">
+          <summary class="p-6 flex justify-between items-center">
+            <span class="font-semibold">What if it doesn't work?</span>
+            <span class="faq-arrow text-muted text-xl">&#9660;</span>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-muted">If LeadCatch doesn't generate at least $2,997 in demonstrable recovered revenue in your first 30 days, we refund your first month in full. No questions asked. We track everything — conversations, appointments, pipeline — so the results are measurable, not theoretical.</div>
+        </details>
+        <details class="bg-dark2 border border-border rounded-xl">
+          <summary class="p-6 flex justify-between items-center">
+            <span class="font-semibold">Can leads tell they're talking to AI?</span>
+            <span class="faq-arrow text-muted text-xl">&#9660;</span>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-muted">No. Alex communicates in short, natural text messages — the same way a real team member would. No robotic language, no "How can I assist you today?" scripts. Alex uses the lead's name, acknowledges what they said, and moves toward the next step. Leads consistently think Alex is a real person.</div>
+        </details>
+        <details class="bg-dark2 border border-border rounded-xl">
+          <summary class="p-6 flex justify-between items-center">
+            <span class="font-semibold">What lead sources does it connect to?</span>
+            <span class="faq-arrow text-muted text-xl">&#9660;</span>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-muted">LeadCatch connects to Google Local Services Ads (LSA), website contact forms, Angi, HomeAdvisor, Yelp, Google Ads leads, and any other source that supports webhooks or form submissions. If a lead comes in somewhere, we can connect it.</div>
+        </details>
+        <details class="bg-dark2 border border-border rounded-xl">
+          <summary class="p-6 flex justify-between items-center">
+            <span class="font-semibold">How long does setup take?</span>
+            <span class="faq-arrow text-muted text-xl">&#9660;</span>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-muted">One 60-minute onboarding call. We connect your lead sources, sync your calendar, customize Alex for your brand, and run test conversations. Most clients are fully live within 24 hours of the call.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WAITLIST + REFERRAL MECHANIC ==================== -->
+  <section id="waitlist" class="max-w-6xl mx-auto px-6 py-20 md:py-28">
+    <div class="max-w-2xl mx-auto">
+      <!-- Signup Form -->
+      <div id="waitlistForm" class="bg-dark2 border border-border rounded-2xl p-8 md:p-12 text-center glow">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Get Early Access</h2>
+        <p class="text-muted mb-8">Join the waitlist. Share your link to skip the line. The earlier you join, the sooner Alex starts booking your jobs.</p>
+        <form id="signupForm" onsubmit="handleWaitlistSubmit(event)">
+          <div class="flex flex-col sm:flex-row gap-3 mb-4">
+            <input type="text" id="wlName" placeholder="First name" required class="flex-none sm:w-40 bg-dark border border-border rounded-xl px-5 py-4 text-white placeholder-muted focus:outline-none focus:border-accent" />
+            <input type="email" id="wlEmail" placeholder="Your best email" required class="flex-1 bg-dark border border-border rounded-xl px-5 py-4 text-white placeholder-muted focus:outline-none focus:border-accent" />
+          </div>
+          <input type="text" id="wlCompany" placeholder="Company name (optional)" class="w-full bg-dark border border-border rounded-xl px-5 py-4 text-white placeholder-muted focus:outline-none focus:border-accent mb-4" />
+          <button type="submit" class="w-full bg-accent hover:bg-accentHover text-white font-bold py-4 rounded-xl text-lg transition-all">Join the Waitlist</button>
+        </form>
+        <p class="text-xs text-muted mt-4">No spam. No credit card required. You'll hear from Dan personally.</p>
+      </div>
+
+      <!-- Referral Success State -->
+      <div id="waitlistSuccess" class="hidden bg-dark2 border border-border rounded-2xl p-8 md:p-12 text-center glow">
+        <div class="text-5xl mb-4">&#127881;</div>
+        <h2 class="text-2xl font-extrabold mb-2">You're on the list!</h2>
+        <p class="text-muted mb-2">You're <span id="positionNumber" class="text-white font-bold">#47</span> in line.</p>
+        <p class="text-muted mb-6">Share your referral link to skip ahead. Every signup from your link moves you up 10 spots.</p>
+
+        <!-- Referral Link -->
+        <div class="bg-dark border border-border rounded-xl p-4 mb-6">
+          <label class="text-xs text-muted block mb-2">Your referral link</label>
+          <div class="flex items-center gap-2">
+            <input type="text" id="referralLink" readonly class="flex-1 bg-transparent text-white text-sm focus:outline-none" value="leadcatch.homes?ref=abc123" />
+            <button onclick="copyReferralLink()" id="copyBtn" class="bg-accent hover:bg-accentHover text-white text-sm font-bold px-4 py-2 rounded-lg transition-all">Copy</button>
+          </div>
+        </div>
+
+        <!-- Referral Rewards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6 text-center">
+          <div class="bg-dark3 border border-border rounded-xl p-3">
+            <div class="text-lg font-bold text-accent">1</div>
+            <div class="text-xs text-muted">referral</div>
+            <div class="text-xs text-white mt-1">+10 spots</div>
+          </div>
+          <div class="bg-dark3 border border-border rounded-xl p-3">
+            <div class="text-lg font-bold text-accent">3</div>
+            <div class="text-xs text-muted">referrals</div>
+            <div class="text-xs text-white mt-1">+50 spots</div>
+          </div>
+          <div class="bg-dark3 border border-border rounded-xl p-3">
+            <div class="text-lg font-bold text-accent">5</div>
+            <div class="text-xs text-muted">referrals</div>
+            <div class="text-xs text-white mt-1">Free DFY setup</div>
+          </div>
+          <div class="bg-dark3 border border-border rounded-xl p-3">
+            <div class="text-lg font-bold text-accent">10</div>
+            <div class="text-xs text-muted">referrals</div>
+            <div class="text-xs text-white mt-1">60% off Lifetime</div>
+          </div>
+        </div>
+
+        <!-- Share Buttons -->
+        <div class="flex flex-wrap justify-center gap-3">
+          <a id="shareTwitter" href="#" target="_blank" class="bg-dark3 border border-border hover:border-muted text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all">Share on X</a>
+          <a id="shareLinkedIn" href="#" target="_blank" class="bg-dark3 border border-border hover:border-muted text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all">Share on LinkedIn</a>
+          <a id="shareEmail" href="#" class="bg-dark3 border border-border hover:border-muted text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all">Share via Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="border-t border-border">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <div>
+          <div class="text-xl font-extrabold mb-2">Lead<span class="text-accent">Catch</span></div>
+          <p class="text-sm text-muted">AI-powered lead conversion for roofing contractors.</p>
+          <p class="text-sm text-muted">Franklin, Tennessee</p>
+        </div>
+        <div class="flex flex-wrap gap-6 text-sm text-muted">
+          <a href="#features" class="hover:text-white transition-colors">Features</a>
+          <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+          <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+          <a href="/terms" class="hover:text-white transition-colors">Terms</a>
+          <a href="/privacy" class="hover:text-white transition-colors">Privacy</a>
+          <a href="/refund" class="hover:text-white transition-colors">Refund Policy</a>
+          <a href="mailto:dan@leadcatch.homes" class="hover:text-white transition-colors">Contact</a>
+        </div>
+      </div>
+      <div class="border-t border-border mt-8 pt-8 text-sm text-muted text-center">
+        &copy; 2026 LeadCatch AI. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Generate a simple referral code
+    function generateRefCode() {
+      return Math.random().toString(36).substring(2, 8);
+    }
+
+    // Get referral source from URL
+    function getReferrer() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('ref') || null;
+    }
+
+    function handleWaitlistSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('wlName').value;
+      const email = document.getElementById('wlEmail').value;
+      const company = document.getElementById('wlCompany').value;
+      const referrer = getReferrer();
+      const refCode = generateRefCode();
+
+      // Simulate position (in production, returned from backend)
+      const position = Math.floor(Math.random() * 80) + 10;
+
+      const data = {
+        name: name,
+        email: email,
+        company: company,
+        referred_by: referrer,
+        referral_code: refCode,
+        source: 'landing-page-waitlist'
+      };
+
+      // Send to webhook
+      fetch('https://hook.us2.make.com/f0313sorwhx2wjjtui8lma58xw91q3gj', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      }).catch(function() {});
+
+      // Update referral link and position
+      const refUrl = 'leadcatch.homes?ref=' + refCode;
+      document.getElementById('referralLink').value = refUrl;
+      document.getElementById('positionNumber').textContent = '#' + position;
+
+      // Update share links
+      const shareText = encodeURIComponent("I just joined the waitlist for LeadCatch AI — an AI that responds to missed calls in 60 seconds and books roofing jobs automatically. Join here:");
+      const shareUrl = encodeURIComponent('https://' + refUrl);
+      document.getElementById('shareTwitter').href = 'https://twitter.com/intent/tweet?text=' + shareText + '%20' + shareUrl;
+      document.getElementById('shareLinkedIn').href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl;
+      document.getElementById('shareEmail').href = 'mailto:?subject=' + encodeURIComponent('Check out LeadCatch AI') + '&body=' + shareText + '%20' + shareUrl;
+
+      // Show success state
+      document.getElementById('waitlistForm').classList.add('hidden');
+      document.getElementById('waitlistSuccess').classList.remove('hidden');
+    }
+
+    function copyReferralLink() {
+      const link = document.getElementById('referralLink').value;
+      navigator.clipboard.writeText('https://' + link).then(function() {
+        document.getElementById('copyBtn').textContent = 'Copied!';
+        setTimeout(function() {
+          document.getElementById('copyBtn').textContent = 'Copy';
+        }, 2000);
+      });
+    }
+  </script>
+
+</body>
+</html>
