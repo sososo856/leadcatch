@@ -107,26 +107,25 @@ Either way, your answer helps me build a better product.
 **Subject:** You're leaving money on the table (here's how much)
 **From:** Dan <dan@leadcatch.homes>
 
+<!-- TODO: Replace [NEEDS: real value] placeholders with live Brevo merge tags before activating this email -->
+
 Hey {first_name},
 
 You've been live for about 10 days. Let me show you what the numbers say.
 
-Based on your lead volume, Alex has handled {conversations_count} conversations and booked {appointments_count} appointments. At your average job value of {avg_job_value}, that's approximately **${recovered_revenue} in pipeline** that would have gone to voicemail.
+Based on your lead volume, Alex has handled [NEEDS: conversations_count — pull from Supabase] conversations and booked [NEEDS: appointments_count — pull from Supabase] appointments. At your average job value of [NEEDS: avg_job_value — confirm with client], that's real pipeline that would have gone to voicemail.
 
 Here's where it gets interesting:
 
-**Storm Surge** — our proactive outreach feature — lets Alex reach out to homeowners in storm-affected zip codes *before* they start searching. Contractors on our Growth plan who use Storm Surge see 30–50% more leads per month.
+**Storm Surge** — our proactive outreach feature — is coming soon. When it launches, it will let Alex reach out to homeowners in storm-affected zip codes *before* they start searching. Early data from our beta suggests contractors using Storm Surge could see 30–50% more leads per month.
 
-You're currently on the Starter plan. Upgrading to Growth unlocks:
-- Storm Surge (proactive outreach)
+You're currently on the Starter plan. Upgrading to Growth will unlock Storm Surge when it launches, plus:
 - Unlimited lead sources
 - Automated Google review requests
 - Weekly performance dashboard
 - Priority support
 
-If your first 10 days generated ${recovered_revenue}, imagine what a full month with Storm Surge looks like.
-
-Want to upgrade? Reply "upgrade" and I'll switch you over today — no new onboarding needed.
+Want to get on the Growth plan before Storm Surge goes live? Reply "upgrade" and I'll switch you over — no new onboarding needed.
 
 — Dan
 

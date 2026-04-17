@@ -1,3 +1,4 @@
+<!-- TODO: Add real Calendly URL before activating -->
 # LeadCatch AI — Abandoned Signup Sequence
 # Purpose: 3 emails for people who viewed pricing but didn't convert
 # Date: 2026-04-16
@@ -55,7 +56,7 @@ Total time: 3 minutes. Zero human effort. One booked job.
 
 That lead would have called your competitor 5 minutes later if nobody responded. Now it's on your calendar.
 
-Want to see it with your own leads? Book a 15-minute call: {booking_link}
+Want to see it with your own leads? Book a 15-minute call: [CALENDLY_URL_NEEDED]
 
 — Dan
 

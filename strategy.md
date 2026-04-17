@@ -1,4 +1,8 @@
 # LeadCatch AI — North Star Strategy
+
+> Last audited: 2026-04-17
+> Status: Pre-launch — 0% tasks complete
+> Priority: Fix Make.com Twilio credentials and webhook URLs before activating any scenarios
 # Purpose: North star metric, postmortem template, v2 feature, launch checklist
 # Date: 2026-04-16
 

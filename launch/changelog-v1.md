@@ -6,7 +6,7 @@
 
 ## v1.0.0 — Launch Day
 
-**Date:** TBD
+**Date:** 2026-04-01
 
 LeadCatch AI is live. Here's what's included in the initial release:
 
@@ -29,7 +29,8 @@ LeadCatch AI is live. Here's what's included in the initial release:
 
 ## v1.1.0 — Storm Surge
 
-**Date:** TBD (Target: Week 3)
+**Date:** Target: 2026-05-01 (not yet built)
+<!-- Storm Surge is in development. Do not present as live or available to clients. -->
 
 **New Feature: Storm Surge**
 When significant weather events hit your service area, LeadCatch now proactively reaches out to homeowners in affected zip codes. Alex sends a message like: "Hey, this is Alex from [Company] — we noticed some storm activity in your area. If you need a roof inspection, we can get someone out this week."
@@ -48,7 +49,7 @@ This puts your business in front of homeowners before they start searching on Go
 
 ## v1.2.0 — Review Engine
 
-**Date:** TBD (Target: Week 5)
+**Date:** TBD (Target: 2026-05-15)
 
 **New Feature: Automated Google Review Requests**
 After a job is marked complete, Alex sends a friendly text asking the homeowner to leave a Google review. The message includes a direct link to your Google Business Profile review page.
@@ -69,7 +70,7 @@ After a job is marked complete, Alex sends a friendly text asking the homeowner 
 
 ## v1.3.0 — Multi-Calendar Routing
 
-**Date:** TBD (Target: Week 7)
+**Date:** TBD (Target: 2026-06-01)
 
 **New Feature: Route Leads to Multiple Calendars**
 For companies with multiple sales reps or service areas, Alex can now route appointments to the right calendar based on:
@@ -88,7 +89,7 @@ For companies with multiple sales reps or service areas, Alex can now route appo
 
 ## v1.4.0 — Dashboard v2
 
-**Date:** TBD (Target: Week 9)
+**Date:** TBD (Target: 2026-06-15)
 
 **Improvements:**
 - New metrics: lead source breakdown (which source generates the most appointments)
