@@ -22,29 +22,17 @@
 
 ---
 
-## Pricing Tiers
+## LeadCatch AI — $2,997/mo
 
-### Starter — $597/mo
-**For:** Solo roofing contractors doing under $1M/year with 5–15 leads per week.
+**One plan. Everything included. No tiers.**
+
+**For:** Roofing contractors doing $750K–$2.5M+/year with 15–50+ leads per week.
 
 **Includes:**
 - Alex AI assistant (SMS + email)
 - 60-second missed call response
-- 5-touch follow-up sequence over 7 days
-- Google Calendar booking integration
-- 1 lead source connected (website form or Google LSA)
-- Monthly performance email
-- Up to 100 lead conversations/month
-
-**Does NOT include:** Storm Surge, multi-source, review requests, dedicated onboarding call.
-
----
-
-### Growth — $2,997/mo (Core Offer)
-**For:** Roofing contractors doing $750K–$2.5M/year with 15–50 leads per week.
-
-**Includes everything in Starter, plus:**
 - 7-touch follow-up sequence over 14 days
+- Google Calendar booking integration
 - Unlimited lead sources (LSA, Angi, HomeAdvisor, website, ads)
 - Storm Surge (proactive outreach to storm-affected zip codes)
 - Automated Google review requests after job completion
@@ -53,29 +41,13 @@
 - Up to 500 lead conversations/month
 - Priority support (Slack or text)
 
-**This is the plan 80% of clients should be on.**
-
----
-
-### Scale — $4,997/mo
-**For:** Multi-crew roofing companies doing $2.5M+ with 50+ leads per week.
-
-**Includes everything in Growth, plus:**
-- Unlimited lead conversations
-- Multiple calendar routing (route leads to different sales reps by territory or service type)
-- Custom Alex persona (tailored language, branding, objection handling)
-- CRM integration (JobNimbus, Jobber, or custom webhook)
-- Bi-weekly strategy calls with Dan
-- White-glove setup of all lead sources
-- Dedicated account manager
-
 ---
 
 ## Founder's Lifetime Deal
 
-**Price:** $14,970 one-time (~58% off annual Growth plan: $2,997 x 12 = $35,964 → discounted to $14,970 = 5x monthly rate)
+**Price:** $14,970 one-time (~58% off annual plan: $2,997 x 12 = $35,964 → discounted to $14,970 = 5x monthly rate)
 
-**What they get:** Growth plan locked in for life. No monthly payments. No price increases. Ever.
+**What they get:** LeadCatch AI plan locked in for life. No monthly payments. No price increases. Ever.
 
 **Cap:** 50 seats. Once they're gone, they're gone. Counter displayed on landing page.
 
@@ -96,7 +68,7 @@
 - 30-minute walkthrough call showing the client exactly how it works
 - Delivered within 48 hours of payment
 
-**Who it's for:** Any client who wants zero setup friction. Included free on Scale plan.
+**Who it's for:** Any client who wants zero setup friction.
 
 ---
 
@@ -107,7 +79,7 @@
 | $0 | Lead Magnet: "Missed Call Revenue Calculator" | Capture email, demonstrate the problem |
 | $27 | Tripwire: "Lead Response Audit + 5 SMS Templates" | Micro-commitment, prove value, enter buyer pool |
 | $97 | Mini-Course: "Speed-to-Lead Masterclass for Contractors" | Education-based conversion, positions LeadCatch as authority |
-| $297 | DFY Installation + First Month Starter | Low-friction trial, converts to $597/mo after month 1 |
-| $997 | Growth Plan (first month at 67% discount) | Anchor the $2,997 price, get them into the system |
+| $497 | DFY Installation Add-On | Zero setup friction, fully configured in 48 hours |
+| $997 | LeadCatch AI (first month at 67% discount) | Anchor the $2,997 price, get them into the system |
 
 **Conversion logic:** Every rung warms the buyer for the next. A contractor who pays $27 is 7x more likely to pay $297. A contractor who pays $297 is already inside the system and seeing results — converting to $2,997/mo becomes a no-brainer.

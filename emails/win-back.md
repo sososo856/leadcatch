@@ -7,7 +7,7 @@
 ## Email 1: Sent 1 day after cancellation
 
 **Subject:** Alex is off the clock
-**From:** Dan <dan@leadcatch.homes>
+**From:** Alex <alex@leadcatch.homes>
 
 Hey {first_name},
 
@@ -34,7 +34,7 @@ Your account stays active for 7 more days. Alex will keep working until then.
 ## Email 2: Sent 5 days after cancellation
 
 **Subject:** What happened to your leads this week?
-**From:** Dan <dan@leadcatch.homes>
+**From:** Alex <alex@leadcatch.homes>
 
 Hey {first_name},
 
@@ -47,12 +47,11 @@ It's been 5 days since you cancelled. Here's what your LeadCatch dashboard showe
 
 I'm not sending this to guilt-trip you. I'm sending it because those numbers don't lie — and right now, those leads are going back to voicemail.
 
-If the reason you left was cost, I have two options for you:
+If budget is a concern, let's jump on a 10-minute call and find a way to make this work for you. I'd rather problem-solve than lose you entirely.
 
-1. **Downgrade to Starter ($597/mo)** — keeps Alex active on your primary lead source with basic follow-up. Not the full system, but better than nothing.
-2. **Pause for 30 days ($0)** — we freeze your account and reactivate it whenever you're ready. No setup fees. No re-onboarding.
+You can also **pause your account for 30 days ($0)** — we freeze everything and reactivate whenever you're ready. No setup fees. No re-onboarding.
 
-Reply "downgrade" or "pause" and I'll handle it today.
+Reply "call" or "pause" and I'll handle it today.
 
 Your account closes in 2 days.
 
@@ -63,7 +62,7 @@ Your account closes in 2 days.
 ## Email 3: Sent 10 days after cancellation (account closed)
 
 **Subject:** Door's always open
-**From:** Dan <dan@leadcatch.homes>
+**From:** Alex <alex@leadcatch.homes>
 
 Hey {first_name},
 
