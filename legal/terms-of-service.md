@@ -83,10 +83,25 @@ LeadCatch AI provides tools and guidance to support compliance, but ultimate res
 
 ---
 
-## 8. Free Trial and Guarantee
+## 7a. Usage Floor
 
-- If offered, free trials are limited to the duration and terms specified at signup.
-- Our 30-day money-back guarantee applies to first-time clients on their first month of service, subject to the conditions in our Refund Policy.
+The System's effectiveness is dependent on inbound call volume to Client's connected number. Client acknowledges that a minimum of 15 inbound calls per week is required for the System to demonstrate measurable ROI within the 30-day evaluation period. Client agrees to direct all marketing and lead-generation efforts to the connected number for the duration of this Agreement.
+
+---
+
+## 8. 30-Day Performance Guarantee
+
+If, within the first 30 days of service, the System fails to book at least one (1) qualified appointment to Client's calendar, Client may request a full refund of the most recent monthly payment. To qualify for the refund, Client must have:
+
+(a) Maintained the connected business phone number for the full 30 days;
+(b) Received a minimum of 60 inbound calls during the 30-day period;
+(c) Completed all required onboarding steps within 7 days of signup;
+(d) Responded to AI handoff notifications within 24 hours;
+(e) Submitted the refund request in writing within 35 days of service start.
+
+Failure to meet any condition voids the guarantee. Setup fees, if any, are non-refundable.
+
+If offered, free trials are limited to the duration and terms specified at signup.
 
 ---
 
@@ -132,9 +147,15 @@ You agree to indemnify and hold harmless LeadCatch AI, its owners, employees, an
 
 ---
 
+## 13a. TCPA & SMS Compliance Indemnification
+
+Client represents and warrants that all phone numbers provided to the System for outbound or response messaging have been obtained with the recipient's prior express consent for commercial SMS, in accordance with the Telephone Consumer Protection Act (TCPA), 47 U.S.C. § 227, and applicable state laws. Client agrees to indemnify, defend, and hold harmless Company from any and all claims, damages, settlements, and legal fees arising from messages sent to recipients who did not provide such consent. Company's role is limited to providing the software automation; consent collection and verification is the sole responsibility of Client.
+
+---
+
 ## 14. Termination
 
-- You may cancel your subscription at any time through your account dashboard or by emailing dan@leadcatch.homes.
+- You may cancel your subscription at any time through your account dashboard or by emailing alex@leadcatch.homes.
 - We may suspend or terminate your account if you violate these Terms, fail to pay, or use the Service in a way that harms other clients or our infrastructure.
 - Upon termination, your access to the Service ends immediately. Data is retained for 90 days per our Privacy Policy.
 
@@ -155,7 +176,7 @@ These Terms are governed by the laws of the State of Tennessee, without regard t
 ## 17. Contact
 
 For questions about these Terms:
-- Email: dan@leadcatch.homes
+- Email: alex@leadcatch.homes
 - Website: leadcatch.homes
 
 ---

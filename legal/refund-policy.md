@@ -11,27 +11,24 @@
 
 ---
 
-## 30-Day Money-Back Guarantee (First Month Only)
+## 30-Day Performance Guarantee
 
-If LeadCatch AI does not generate at least $2,997 in demonstrable recovered revenue during your first 30 days of active service, we will refund your first month's payment in full. No questions asked.
+If, within the first 30 days of service, the System fails to book at least one (1) qualified appointment to Client's calendar, Client may request a full refund of the most recent monthly payment. To qualify for the refund, Client must have:
 
-### How "Demonstrable Recovered Revenue" Is Defined
+(a) Maintained the connected business phone number for the full 30 days;
+(b) Received a minimum of 60 inbound calls during the 30-day period;
+(c) Completed all required onboarding steps within 7 days of signup;
+(d) Responded to AI handoff notifications within 24 hours;
+(e) Submitted the refund request in writing within 35 days of service start.
 
-A lead counts as recovered revenue when all of the following are true:
-1. The lead submitted an inquiry through one of your connected lead sources
-2. Alex (our AI) initiated contact within 60 seconds
-3. The lead engaged in a qualifying conversation
-4. An appointment was booked on your calendar
-5. The appointment was confirmed as a new business opportunity (not a duplicate or existing customer)
-
-Revenue is estimated using your reported average job value. We do not require proof of a closed deal — only proof that LeadCatch generated a new, qualified appointment.
+Failure to meet any condition voids the guarantee. Setup fees, if any, are non-refundable.
 
 ### How to Request a Guarantee Refund
 
-1. Email dan@leadcatch.homes within 35 days of your first payment
-2. Include your business name and the reason for the request
+1. Email alex@leadcatch.homes within 35 days of your first payment
+2. Include your business name and confirmation that conditions (a)–(d) above were met during the period
 3. We will review your account data within 48 hours
-4. If the $2,997 recovered revenue threshold was not met, your refund is processed within 5 business days
+4. If all conditions are satisfied and zero qualified appointments were booked, your refund is processed within 5 business days
 
 ---
 
@@ -59,12 +56,12 @@ Revenue is estimated using your reported average job value. We do not require pr
 
 ## Chargebacks
 
-If you initiate a chargeback with your bank instead of contacting us, we reserve the right to suspend your account immediately and pursue the dispute through Stripe's chargeback resolution process. We always prefer to resolve billing issues directly — email dan@leadcatch.homes first.
+If you initiate a chargeback with your bank instead of contacting us, we reserve the right to suspend your account immediately and pursue the dispute through Stripe's chargeback resolution process. We always prefer to resolve billing issues directly — email alex@leadcatch.homes first.
 
 ---
 
 ## Contact
 
 For refund requests or billing questions:
-- Email: dan@leadcatch.homes
+- Email: alex@leadcatch.homes
 - Response time: within 24 hours on business days
