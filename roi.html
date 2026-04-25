@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<!--
+  File: roi.html
+  Purpose: ROI calculator for missed-call lost revenue. URL params prefill the form
+           so cold/follow-up emails can deep-link the prospect's own numbers.
+  Site: leadcatch.homes/roi
+  Params: ?calls=60&miss_rate=30&avg_job=8000&close_rate=25
+  Date: 2026-04-25
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="See how much revenue your roofing business is losing to missed calls. Free ROI calculator." />
+  <title>ROI Calculator — How Much Are Missed Calls Costing You? | LeadCatch</title>
+  <link rel="canonical" href="https://leadcatch.homes/roi" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>" />
+  <meta property="og:title" content="ROI Calculator — How Much Are Missed Calls Costing You?" />
+  <meta property="og:description" content="See your monthly loss in 30 seconds. Free, no signup." />
+  <meta property="og:image" content="https://leadcatch.homes/og-image.png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d1117;
+      --bg2: #161b22;
+      --bg3: #1c2330;
+      --border: #2a3444;
+      --accent: #f97316;
+      --accent-dim: rgba(249,115,22,0.15);
+      --green: #22c55e;
+      --green-dim: rgba(34,197,94,0.12);
+      --red: #ef4444;
+      --red-dim: rgba(239,68,68,0.12);
+      --text: #e6edf3;
+      --muted: #8b9ab1;
+      --white: #ffffff;
+      --radius: 12px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13,17,23,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo { font-size: 1.2rem; font-weight: 800; color: var(--white); text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--white);
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+    h1 span { color: var(--accent); }
+    .lead {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 36px;
+      max-width: 560px;
+    }
+
+    form {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      display: grid;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    label small {
+      color: var(--muted);
+      font-weight: 400;
+      margin-left: 6px;
+    }
+
+    .field {
+      position: relative;
+    }
+    input[type="number"] {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--white);
+      font-family: inherit;
+      font-size: 1.05rem;
+      padding: 12px 14px;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 120ms;
+    }
+    input[type="number"]:focus { border-color: var(--accent); }
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button { opacity: 1; }
+
+    .suffix {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-size: 0.9rem;
+      pointer-events: none;
+    }
+
+    .results {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      display: grid;
+      gap: 18px;
+    }
+    .row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .row:last-of-type { border-bottom: none; padding-bottom: 0; }
+    .row-label { color: var(--muted); font-size: 0.95rem; }
+    .row-value {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .row.headline {
+      background: var(--red-dim);
+      border: 1px solid rgba(239,68,68,0.35);
+      border-radius: 8px;
+      padding: 16px 18px;
+    }
+    .row.headline .row-label { color: var(--red); font-weight: 600; }
+    .row.headline .row-value { color: var(--red); font-size: 1.6rem; }
+
+    .row.win {
+      background: var(--green-dim);
+      border: 1px solid rgba(34,197,94,0.35);
+      border-radius: 8px;
+      padding: 16px 18px;
+    }
+    .row.win .row-label { color: var(--green); font-weight: 600; }
+    .row.win .row-value { color: var(--green); font-size: 1.4rem; }
+
+    .cta {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 32px;
+      padding: 28px;
+      background: var(--accent-dim);
+      border: 1px solid rgba(249,115,22,0.35);
+      border-radius: var(--radius);
+      text-align: center;
+    }
+    .cta h2 {
+      color: var(--white);
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    .cta p { color: var(--muted); }
+    .cta a {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 120ms;
+      align-self: center;
+    }
+    .cta a:hover { opacity: 0.9; }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-top: 56px;
+      padding: 24px;
+    }
+    footer a { color: var(--muted); text-decoration: underline; }
+
+    @media (min-width: 600px) {
+      form { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="/">Lead<span>Catch</span></a>
+    <a href="/" style="color:var(--muted);text-decoration:none;font-size:0.9rem;">← Home</a>
+  </nav>
+
+  <main>
+    <h1>How much are missed calls <span>actually</span> costing you?</h1>
+    <p class="lead">Drop in your numbers. We'll do the math. Most roofers we talk to are losing $20K–$60K every single month — and they didn't even know.</p>
+
+    <form id="roi-form">
+      <div class="field">
+        <label for="calls">Inbound calls per week <small>(estimate)</small></label>
+        <input type="number" id="calls" min="1" max="500" value="60" />
+      </div>
+      <div class="field">
+        <label for="miss_rate">% of calls you miss <small>(busy / off-hours)</small></label>
+        <input type="number" id="miss_rate" min="1" max="100" step="1" value="30" />
+        <span class="suffix">%</span>
+      </div>
+      <div class="field">
+        <label for="avg_job">Average job value</label>
+        <input type="number" id="avg_job" min="100" step="100" value="8000" />
+        <span class="suffix">USD</span>
+      </div>
+      <div class="field">
+        <label for="close_rate">Close rate on calls answered</label>
+        <input type="number" id="close_rate" min="1" max="100" step="1" value="25" />
+        <span class="suffix">%</span>
+      </div>
+    </form>
+
+    <div class="results" id="results">
+      <div class="row">
+        <span class="row-label">Calls missed per month</span>
+        <span class="row-value" id="missed_count">—</span>
+      </div>
+      <div class="row">
+        <span class="row-label">Lost jobs per month</span>
+        <span class="row-value" id="lost_jobs">—</span>
+      </div>
+      <div class="row headline">
+        <span class="row-label">Lost revenue / month</span>
+        <span class="row-value" id="lost_revenue">—</span>
+      </div>
+      <div class="row win">
+        <span class="row-label">LeadCatch could recover ~80% of this</span>
+        <span class="row-value" id="recovered">—</span>
+      </div>
+      <div class="row">
+        <span class="row-label">ROI on $2,997/mo plan</span>
+        <span class="row-value" id="roi_x">—</span>
+      </div>
+    </div>
+
+    <div class="cta">
+      <h2>Ready to stop bleeding revenue?</h2>
+      <p>30-day money-back performance guarantee. One booked job covers your entire monthly fee.</p>
+      <a href="/#contact">Book a 15-min audit →</a>
+    </div>
+
+    <footer>
+      © 2026 LeadCatch AI · <a href="/refund">Refund policy</a> · <a href="/terms">Terms</a> · <a href="/privacy">Privacy</a>
+    </footer>
+  </main>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const fmt = (n) => '$' + Math.round(n).toLocaleString();
+    const fmtNum = (n) => Math.round(n).toLocaleString();
+
+    function recompute() {
+      const calls = Math.max(0, parseFloat($('calls').value) || 0);
+      const missRate = Math.max(0, Math.min(100, parseFloat($('miss_rate').value) || 0)) / 100;
+      const avgJob = Math.max(0, parseFloat($('avg_job').value) || 0);
+      const closeRate = Math.max(0, Math.min(100, parseFloat($('close_rate').value) || 0)) / 100;
+
+      const missedPerWeek = calls * missRate;
+      const missedPerMonth = missedPerWeek * 4.33;
+      const lostJobs = missedPerMonth * closeRate;
+      const lostRevenue = lostJobs * avgJob;
+      const recovered = lostRevenue * 0.8;
+      const roiX = recovered / 2997;
+
+      $('missed_count').textContent = fmtNum(missedPerMonth);
+      $('lost_jobs').textContent = fmtNum(lostJobs);
+      $('lost_revenue').textContent = fmt(lostRevenue);
+      $('recovered').textContent = fmt(recovered) + ' / mo';
+      $('roi_x').textContent = roiX >= 1 ? roiX.toFixed(1) + 'x' : '< 1x';
+    }
+
+    function readParams() {
+      const p = new URLSearchParams(location.search);
+      const map = { calls: 'calls', miss_rate: 'miss_rate', avg_job: 'avg_job', close_rate: 'close_rate' };
+      Object.entries(map).forEach(([k, id]) => {
+        const v = p.get(k);
+        if (v && !isNaN(parseFloat(v))) $(id).value = parseFloat(v);
+      });
+    }
+
+    document.querySelectorAll('input').forEach((el) => el.addEventListener('input', recompute));
+    readParams();
+    recompute();
+  </script>
+</body>
+</html>
